@@ -19,7 +19,7 @@ source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
 # (list) Requisitos do aplicativo (AQUI ESTÁ A CORREÇÃO DO KIVY)
-requirements = python3,kivy>=2.3.1
+requirements = python3,kivy==2.2.1
 
 # (str) Orientação suportada (landscape, sensorLandscape, portrait ou all)
 orientation = portrait
