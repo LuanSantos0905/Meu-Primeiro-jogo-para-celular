@@ -18,10 +18,16 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Configurar o Java (Solução Anti-Travamento)
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
       - name: Instalar dependências do sistema
         run: |
           sudo apt-get update
-          sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev libgl1-mesa-dev libgles2-mesa-dev libmtdev-dev
+          sudo apt-get install -y git zip unzip python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev libgl1-mesa-dev libgles2-mesa-dev libmtdev-dev
 
       - name: Instalar Buildozer e Cython
         run: |
